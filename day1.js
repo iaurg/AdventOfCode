@@ -25,3 +25,20 @@ function getFuelReqRecursive(items) {
 }
 
 console.log("Using 'recursion':", getFuelReqRecursive(allReq))
+
+
+//Day one second Star
+
+function getFuelReqNewFuel(array){
+  let sumFuel = 0;
+  for(let i = 0; i < array.length; i++){
+    let round = Math.floor(array[i]/3) - 2;
+    while(round > 0){
+      sumFuel += round
+      round = Math.floor(round/3) - 2;
+    }    
+  }
+  return sumFuel;
+}
+
+getFuelReqNewFuel(allReq)
